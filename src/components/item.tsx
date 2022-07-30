@@ -14,10 +14,10 @@ export const Item = (props: Props) => {
 
   return (
     <div>
-      {props.item.name}
-      {props.item.price}
-      wäre
-      {adjusted.adjustedPrice.toFixed(2)}
+      <span>{props.item.name}</span>
+      <span>{props.item.price}</span>
+      <span>wäre</span>
+      <span>{adjusted.adjustedPrice.toFixed(2)}</span>
     </div>
   );
 };

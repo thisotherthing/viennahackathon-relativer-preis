@@ -36,6 +36,11 @@ const nextConfig = {
       ],
     });
 
+    config.module.rules.push({
+      test: /\.csv$/i,
+      use: "raw-loader",
+    });
+
     return config;
   },
 };
