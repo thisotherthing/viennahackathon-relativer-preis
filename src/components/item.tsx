@@ -33,11 +33,11 @@ export const Item = (props: Props) => {
   if (props.item.federalStateFilter !== undefined && props.item.federalStateFilter !== federalState) return null;
 
   return (
-    <div tw="flex justify-between">
-      <span tw="w-4">{props.item.name}</span>
-      <span>{props.item.price}</span>
-      <span>wäre</span>
-      <span>{adjusted.adjustedPrice.toFixed(2)}</span>
-    </div>
+    <Row>
+      <td>{props.item.name}</td>
+      <td>{props.item.price}</td>
+      <td>wäre</td>
+      <td>{adjusted.adjustedPrice.toFixed(2)}</td>
+    </Row>
   );
 };
