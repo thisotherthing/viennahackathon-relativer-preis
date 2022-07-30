@@ -1,6 +1,8 @@
 import { parse } from "csv-parse/sync";
-import preise from "~/assets/preise.csv";
-import miete from "~/assets/miete.csv";
+
+import preiseCsv from "~/assets/preise.csv";
+import mieteCsv from "~/assets/miete.csv";
+import referencesCsv from "~/assets/references.csv";
 
 export const federalStates = [
   "Burgenland",
@@ -27,7 +29,7 @@ export type ReferenceIncome = {
   value: number;
 };
 
-const prices: ComparisonItem[] = parse(preise)
+const prices: ComparisonItem[] = parse(preiseCsv)
   .map((line: string[]) => {
     const item: ComparisonItem = {
       category: line[0] || "",
@@ -38,7 +40,7 @@ const prices: ComparisonItem[] = parse(preise)
     return item;
   })
   .filter((item: ComparisonItem) => !Number.isNaN(item.price));
-const rents = parse(miete, { delimiter: ";" })
+const rents = parse(mieteCsv, { delimiter: ";" })
   .map((line: string[]) => {
     const item: ComparisonItem = {
       category: "Wohnen",
@@ -53,5 +55,12 @@ const rents = parse(miete, { delimiter: ";" })
   .filter((item: ComparisonItem) => !Number.isNaN(item.price));
 
 export const Items: ComparisonItem[] = [...rents, ...prices];
+
+export const references: { name: string; url: string }[] = parse(referencesCsv).map((line: string[]) => {
+  return {
+    name: line[0],
+    url: line[1],
+  };
+});
 
 export const Incomes: ReferenceIncome[] = [{ name: "Armutsgefährdungsschwelle", value: 1371 }];

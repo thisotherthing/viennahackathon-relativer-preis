@@ -17,7 +17,11 @@ export const Item = (props: Props) => {
 
   return (
     <tr>
-      <td>{props.item.name}</td>
+      <td>
+        <a tw="underline" target="_blank" rel="noopener noreferrer" href={props.item.url}>
+          {props.item.name}
+        </a>
+      </td>
       <td>{props.item.price}</td>
       <td>wäre</td>
       <td>{adjusted.adjustedPrice.toFixed(2)}</td>

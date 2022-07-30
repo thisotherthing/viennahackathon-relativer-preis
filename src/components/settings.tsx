@@ -7,7 +7,7 @@ export const Settings = () => {
 
   return (
     <div tw="space-y-10">
-      <div tw="flex justify-between ">
+      {/* <div tw="flex justify-between ">
         <label htmlFor="reference-income">Vergleichseinkommen</label>
         <select
           tw="border-2 rounded"
@@ -23,7 +23,7 @@ export const Settings = () => {
             <option value={income.value}>{`${income.name} (${income.value})`}</option>
           ))}
         </select>
-      </div>
+      </div> */}
       <div tw="flex justify-between">
         <label htmlFor="federal-state">Bundesland</label>
         <select
