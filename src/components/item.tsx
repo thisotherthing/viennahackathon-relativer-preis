@@ -13,7 +13,7 @@ export const Item = (props: Props) => {
   const adjusted = getAdjustedPrice(props.item, referenceIncome, income);
 
   return (
-    <div>
+    <div tw="">
       {props.item.name}
       {props.item.price}
       wäre
