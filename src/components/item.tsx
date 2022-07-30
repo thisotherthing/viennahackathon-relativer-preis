@@ -18,9 +18,15 @@ const Row = styled.tr`
     padding: 0.4em 0;
     padding-left: 1em;
   }
+  td:nth-child(2) {
+    width: 6em;
+    text-align: end;
+    padding-right: 2em;
+  }
   td:last-child {
     text-align: end;
     padding-left: 2em;
+    width: 6em;
     padding-right: 1em;
   }
 `;
