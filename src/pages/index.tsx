@@ -7,6 +7,7 @@ import { ItemList } from "~/components/ItemList";
 import { Slider } from "~/components/slider";
 import { Items } from "~/assets/data";
 import { Context } from "~/contexts/context";
+import { Settings } from "~/components/settings";
 
 interface Props {}
 
