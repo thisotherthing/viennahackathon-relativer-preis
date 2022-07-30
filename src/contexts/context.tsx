@@ -20,7 +20,7 @@ export type ContextType = {
 };
 
 export const ContextProvider: React.FC<React.ReactNode> = ({ children }) => {
-  const [income, setIncome] = React.useState(25000);
+  const [income, setIncome] = React.useState(1300);
   const [referenceIncome, setReferenceIncome] = React.useState(Incomes[0]!.value);
   const [federalState, setFederalState] = React.useState("Wien");
   return (

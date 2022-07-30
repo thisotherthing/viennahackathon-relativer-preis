@@ -19,6 +19,7 @@ export const Slider = () => {
         min="0"
         max="10000"
         tw="w-full cursor-pointer outline-none "
+        value={income}
         onChange={(v) => {
           if (v.target && setIncome !== undefined) {
             setIncome(parseFloat(v.target.value) || 0);
