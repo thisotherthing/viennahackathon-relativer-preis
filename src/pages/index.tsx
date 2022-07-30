@@ -31,7 +31,7 @@ const Index: NextPage<Props> = () => {
           <div tw="flex justify-between mt-20 items-center text-left">
             <span>Preisveränderung:</span>
             <span tw="text-[25px] whitespace-nowrap">
-              {getAdjustedPrice({ price: 100 }, referenceIncome, income).adjustedPrice.toFixed(2)} %
+              {getAdjustedPrice({ price: 100 }, referenceIncome, income).adjustedPrice.toFixed(1)} %
             </span>
           </div>
           <ItemList items={Items} />
