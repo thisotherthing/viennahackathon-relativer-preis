@@ -18,6 +18,11 @@ declare module "*.jpeg" {
   export default payload;
 }
 
+declare module "*.csv" {
+  const payload: string;
+  export default payload;
+}
+
 declare module "*.svg" {
   const payload: React.FC<React.SVGAttributes<SVGElement>>;
   export default payload;
