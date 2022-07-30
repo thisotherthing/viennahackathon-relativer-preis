@@ -8,6 +8,10 @@ type Props = {
   item: ComparisonItem;
 };
 
+const formatNumber = (v: number): string => {
+  return v < 10 ? v.toFixed(2) : v.toFixed(0);
+};
+
 export const Item = (props: Props) => {
   const { income, referenceIncome, federalState } = useContext(Context);
 
@@ -27,15 +31,15 @@ export const Item = (props: Props) => {
         </div>
 
         <div tw="flex flex-col w-full truncate">
-          <h3 tw="truncate mb-8 font-size[15px] md:font-size[18px]">
+          <h3 tw="truncate mb-8 font-size[14px] md:font-size[18px]">
             <a tw="underline" target="_blank" rel="noopener noreferrer" href={props.item.url}>
               {props.item.name}
             </a>
           </h3>
-          <div tw="w-full flex flex-row justify-between font-size[18px] md:font-size[22px]">
-            <span>{props.item.price} €</span>
+          <div tw="w-full flex flex-row justify-between font-size[16px] md:font-size[22px]">
+            <span>{formatNumber(props.item.price)} €</span>
             <span>{"-->"}</span>
-            <span>{adjusted.adjustedPrice.toFixed(2)} €</span>
+            <span>{formatNumber(adjusted.adjustedPrice)} €</span>
           </div>
         </div>
       </div>
