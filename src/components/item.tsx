@@ -16,9 +16,9 @@ export const Item = (props: Props) => {
   if (props.item.federalStateFilter !== undefined && props.item.federalStateFilter !== federalState) return null;
 
   return (
-    <section tw="flex flex-row items-center border-radius[30px] border border-black p-16 pr-40 mb-20 w-full md:width[calc(50% - 10px)] font-bold">
+    <section tw="flex flex-row items-center border-radius[30px] border border-black p-16 pr-28 mb-20 w-full md:width[calc(50% - 10px)] font-bold">
       <div
-        tw="aspect-ratio[1] width[100px] border-radius[20px] overflow-hidden mr-30 flex-shrink-0 flex justify-center items-center"
+        tw="aspect-ratio[1] width[100px] border-radius[20px] overflow-hidden mr-26 flex-shrink-0 flex justify-center items-center"
         style={{ background: `#${props.item.color}` || "green" }}
       >
         <img tw="w-60" src={`/icons/${props.item.icon}.svg`} alt={`${props.item.name} icon`} aria-hidden />

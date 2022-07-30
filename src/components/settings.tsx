@@ -38,7 +38,9 @@ export const Settings = () => {
           }}
         >
           {federalStates.map((state) => (
-            <option value={state}>{state}</option>
+            <option value={state} key={state}>
+              {state}
+            </option>
           ))}
         </select>
       </div>
