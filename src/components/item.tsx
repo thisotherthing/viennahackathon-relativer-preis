@@ -8,9 +8,11 @@ type Props = {
 };
 
 export const Item = (props: Props) => {
-  const { income, referenceIncome } = useContext(Context);
+  const { income, referenceIncome, federalState } = useContext(Context);
 
   const adjusted = getAdjustedPrice(props.item, referenceIncome, income);
+
+  if (props.item.federalStateFilter !== undefined && props.item.federalStateFilter !== federalState) return null;
 
   return (
     <div>

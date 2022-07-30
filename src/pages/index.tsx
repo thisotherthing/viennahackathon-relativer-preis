@@ -21,6 +21,7 @@ const Index: NextPage<Props> = () => {
         <div tw="container m-auto text-center">
           <h1 tw="text-lg font-black">Relative Preise</h1>
           <Slider />
+          <Settings />
           Referenz Einkommen: {referenceIncome}
           <ItemList items={Items} />
         </div>
