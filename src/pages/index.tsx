@@ -18,10 +18,14 @@ const Index: NextPage<Props> = () => {
     <>
       <NextSeo title="Relative Preise" />
       <DefaultPage>
-        <div tw="container m-auto text-center">
-          <h1 tw="text-lg font-black">Relative Preise</h1>
+        <div tw="max-w-7xl m-auto text-center h-screen items-center text-[20px]">
+          <h1 tw="text-[40px] font-black ">Relative Preise</h1>
           <Slider />
-          Referenz Einkommen: {referenceIncome}
+          <Settings />
+          <div tw="flex justify-between mt-20 items-center">
+            <span>Referenz Einkommen:</span>
+            <span tw="text-[25px]">{referenceIncome} €</span>
+          </div>
           <ItemList items={Items} />
         </div>
       </DefaultPage>

@@ -13,11 +13,11 @@ export const Item = (props: Props) => {
   const adjusted = getAdjustedPrice(props.item, referenceIncome, income);
 
   return (
-    <div tw="">
-      {props.item.name}
-      {props.item.price}
-      wäre
-      {adjusted.adjustedPrice.toFixed(2)}
+    <div tw="flex justify-between">
+      <span>{props.item.name}</span>
+      <span>{props.item.price}</span>
+      <span>wäre</span>
+      <span>{adjusted.adjustedPrice.toFixed(2)}</span>
     </div>
   );
 };

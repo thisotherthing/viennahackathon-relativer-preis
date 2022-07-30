@@ -6,7 +6,7 @@ export const Settings = () => {
   const { setReferenceIncome } = useContext(Context);
 
   return (
-    <div>
+    <div tw="flex justify-between">
       <label htmlFor="reference-income">Vergleichseinkommen</label>
 
       <select
