@@ -3,7 +3,7 @@ import { federalStates, Incomes } from "~/assets/data";
 import { Context } from "~/contexts/context";
 
 export const Settings = () => {
-  const { setReferenceIncome, setFederalState } = useContext(Context);
+  const { setReferenceIncome, federalState, setFederalState } = useContext(Context);
 
   return (
     <div tw="space-y-10">
@@ -30,6 +30,7 @@ export const Settings = () => {
           tw="border-2 rounded"
           name="Bundesland"
           id="federal-state"
+          value={federalState}
           onChange={(v) => {
             if (v.target && setReferenceIncome !== undefined) {
               setFederalState(v.target.value || "");
