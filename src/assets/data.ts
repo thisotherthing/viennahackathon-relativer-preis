@@ -51,7 +51,6 @@ const rents = parse(miete, { delimiter: ";" })
     return item;
   })
   .filter((item: ComparisonItem) => !Number.isNaN(item.price));
-console.log(rents);
 
 export const Items: ComparisonItem[] = [...rents, ...prices];
 
