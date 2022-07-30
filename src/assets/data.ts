@@ -54,7 +54,4 @@ const rents = parse(miete, { delimiter: ";" })
 
 export const Items: ComparisonItem[] = [...rents, ...prices];
 
-export const Incomes: ReferenceIncome[] = [
-  { name: "Armutsgrenze", value: 12000 },
-  { name: "Mindesteinkommen", value: 20000 },
-];
+export const Incomes: ReferenceIncome[] = [{ name: "Armutsgefährdungsschwelle", value: 1371 }];

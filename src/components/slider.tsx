@@ -17,7 +17,7 @@ export const Slider = () => {
         id="_income_slider"
         name="volume"
         min="0"
-        max="65000"
+        max="10000"
         tw="w-full cursor-pointer outline-none "
         onChange={(v) => {
           if (v.target && setIncome !== undefined) {
