@@ -7,6 +7,7 @@ import { ItemList } from "~/components/ItemList";
 import { Slider } from "~/components/slider";
 import { Items } from "~/assets/data";
 import { Context } from "~/contexts/context";
+import { Settings } from "~/components/settings";
 
 interface Props {}
 
@@ -19,6 +20,7 @@ const Index: NextPage<Props> = () => {
       <DefaultPage>
         <h1>Relative Preise</h1>
         <Slider />
+        <Settings />
         Referenz Einkommen: {referenceIncome}
         <ItemList items={Items} />
       </DefaultPage>
