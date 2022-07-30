@@ -1,9 +1,9 @@
 Kategorie,Produkt,icons,colors,Preis,Quelle,,,,,
-Essen & Trinken,Laib Brot,brot,ECC6C6,"5,90 €",shop.billa.at,,,,,
-Essen & Trinken,1 Liter Milch,milch,ECC6C6,"1,59 €",shop.billa.at,,,,,
-Alkohol & Tabak,"1 Dose Bier 0,5L",bier,E9D4BE,"1,20 €",shop.billa.at,,,,,
+Essen & Trinken,Laib Brot,brot,ECC6C6,"5,90 €",https://www.billa.at/suche/brot,,,,,
+Essen & Trinken,1 Liter Milch,milch,ECC6C6,"1,59 €",https://www.billa.at/suche/milch,,,,,
+Alkohol & Tabak,"1 Dose Bier 0,5L",bier,E9D4BE,"1,20 €",https://www.billa.at/suche/bier,,,,,
 Alkohol & Tabak,1 Packung Marlboro,marlboro,E9D4BE,"5,35 €",https://www.trafikantenzeitung.at/industrie-grosshandel/die-zigarettenpreise-ab-1-april-2022-48296,,,,,
-Bekleidung & Schuhe,1 Tshirt,tshirt,E8E9BE,"30,00 €",,,,,,
+Bekleidung & Schuhe,1 Tshirt,tshirt,E8E9BE,"30,00 €",https://www2.hm.com/de_at/productpage.1064051004.html,,,,,
 Wohnen & Energie,Miete mit Betriebskosten,miete,D4E9BE,"553,40 €","553,40 €",,,,,--> siehe CSV Datei
 Wohnen & Energie,1l Benzin,benzin,D4E9BE,"2,00 €",https://de.statista.com/statistik/daten/studie/796570/umfrage/durchschnittlicher-preis-fuer-einen-liter-benzin-in-oesterreich/#professional,,,,,
 Wohnungsausstattung,Bett,bett,BAE8BC,"149,00 €",https://www.ikea.com/at/de/p/kleppstad-bettgestell-weiss-vissle-beige-00492677/,,,,,

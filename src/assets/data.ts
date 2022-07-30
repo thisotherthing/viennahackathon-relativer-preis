@@ -38,7 +38,7 @@ const prices: ComparisonItem[] = parse(preiseCsv)
       name: line[1] || "",
       icon: line[2] || "",
       color: line[3] || "grey",
-      price: parseFloat((line[4] || "").replace(",", ".")),
+      price: parseFloat((line[4] || "").replace(".", "").replace(",", ".")),
       url: line[5] || "",
     };
     return item;
@@ -48,7 +48,7 @@ const rents = parse(mieteCsv, { delimiter: ";" })
   .map((line: string[]) => {
     const item: ComparisonItem = {
       category: "Wohnen",
-      name: `Miete mit Betriebskosten (${line[0]})`,
+      name: `Miete warm (${line[0]})`,
       icon: "miete",
       color: "D4E9BE",
       price: parseFloat((line[2] || "").replace(",", ".")),
