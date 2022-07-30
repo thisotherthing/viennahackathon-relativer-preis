@@ -10,7 +10,7 @@ export const Slider = () => {
         <label tw="text-[30px]" htmlFor="_income_slider">
           Monatliches Netto-Einkommen:
         </label>
-        <span tw="text-[30px]">{income} €</span>
+        <span tw="text-[30px] whitespace-nowrap">{income} €</span>
       </div>
       <input
         type="range"

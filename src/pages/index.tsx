@@ -5,9 +5,10 @@ import { DefaultPage } from "~/layouts/DefaultPage";
 import { ItemList } from "~/components/ItemList";
 
 import { Slider } from "~/components/slider";
-import { Items } from "~/assets/data";
+import { Incomes, Items } from "~/assets/data";
 import { Context } from "~/contexts/context";
 import { Settings } from "~/components/settings";
+import { References } from "~/components/References";
 
 interface Props {}
 
@@ -18,15 +19,17 @@ const Index: NextPage<Props> = () => {
     <>
       <NextSeo title="Relative Preise" />
       <DefaultPage>
-        <div tw="max-w-[92%] md:max-w-[40%] m-auto text-center h-screen items-center text-[20px] mt-80">
+        <div tw="max-w-[92%] md:max-w-[40%] m-auto h-screen text-left text-[20px] mt-80">
           <h1 tw="text-[40px] font-black ">Relative Preise</h1>
           <Slider />
           <Settings />
-          <div tw="flex justify-between mt-20 items-center">
-            <span>Referenz Einkommen:</span>
-            <span tw="text-[25px]">{referenceIncome} €</span>
+          <div tw="flex justify-between mt-20 items-center text-left">
+            <span>Referenz Einkommen {Incomes[0]?.name}:</span>
+            <span tw="text-[25px] whitespace-nowrap">{referenceIncome} €</span>
           </div>
           <ItemList items={Items} />
+
+          <References />
         </div>
       </DefaultPage>
     </>
