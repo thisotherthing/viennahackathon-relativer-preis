@@ -16,7 +16,7 @@ export const Item = (props: Props) => {
 
   return (
     <div tw="flex justify-between">
-      <span>{props.item.name}</span>
+      <span tw="w-4">{props.item.name}</span>
       <span>{props.item.price}</span>
       <span>wäre</span>
       <span>{adjusted.adjustedPrice.toFixed(2)}</span>
