@@ -6,7 +6,7 @@ export const Settings = () => {
   const { setReferenceIncome, federalState, setFederalState } = useContext(Context);
 
   return (
-    <div tw="space-y-10">
+    <div tw="space-y-10 mb-40">
       {/* <div tw="flex justify-between ">
         <label htmlFor="reference-income">Vergleichseinkommen</label>
         <select

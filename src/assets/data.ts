@@ -21,6 +21,8 @@ export type ComparisonItem = {
   name: string;
   price: number;
   url: string;
+  icon: string;
+  color: string;
   federalStateFilter?: string;
 };
 
@@ -34,17 +36,21 @@ const prices: ComparisonItem[] = parse(preiseCsv)
     const item: ComparisonItem = {
       category: line[0] || "",
       name: line[1] || "",
-      price: parseFloat((line[2] || "").replace(",", ".")),
-      url: line[3] || "",
+      icon: line[2] || "",
+      color: line[3] || "grey",
+      price: parseFloat((line[4] || "").replace(",", ".")),
+      url: line[5] || "",
     };
     return item;
   })
-  .filter((item: ComparisonItem) => !Number.isNaN(item.price));
+  .filter((item: ComparisonItem) => !Number.isNaN(item.price) && item.icon !== "miete");
 const rents = parse(mieteCsv, { delimiter: ";" })
   .map((line: string[]) => {
     const item: ComparisonItem = {
       category: "Wohnen",
       name: `Miete mit Betriebskosten (${line[0]})`,
+      icon: "miete",
+      color: "D4E9BE",
       price: parseFloat((line[2] || "").replace(",", ".")),
       url: "https://www.statistik.at/statistiken/bevoelkerung-und-soziales/wohnen/wohnkosten",
       federalStateFilter: federalStates.includes((line[0] || "").trim()) ? line[0] : undefined,

@@ -1,7 +1,7 @@
 import { ComparisonItem } from "~/assets/data";
 
 export const getAdjustedPrice = (
-  item: ComparisonItem,
+  item: { price: number },
   referenceIncome: number,
   income: number
 ): { adjustedPrice: number } => {
