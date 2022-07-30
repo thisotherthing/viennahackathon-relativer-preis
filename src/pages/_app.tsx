@@ -4,6 +4,7 @@ import { DefaultSeo, DefaultSeoProps } from "next-seo";
 import { GlobalStyles } from "~/styles/GlobalStyles";
 
 import "~/styles/fonts.css";
+import { ContextProvider } from "~/contexts/context";
 
 const defaultSeo: DefaultSeoProps = {
   title: "wild-next",
@@ -34,7 +35,9 @@ const App = ({ Component, pageProps }: AppProps) => {
         <link rel="preload" href="/fonts/Inter-Regular.otf" as="font" type="font/otf" crossOrigin="anonymous" />
       </NextHead>
       <GlobalStyles />
-      <Component {...pageProps} />
+      <ContextProvider>
+        <Component {...pageProps} />
+      </ContextProvider>
     </>
   );
 };

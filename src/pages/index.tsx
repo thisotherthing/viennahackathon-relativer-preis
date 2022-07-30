@@ -1,17 +1,26 @@
 import { NextPage } from "next";
 import { NextSeo } from "next-seo";
+import { useContext } from "react";
 import { DefaultPage } from "~/layouts/DefaultPage";
-import LogoSvg from "~/assets/logo.svg";
+import { ItemList } from "~/components/ItemList";
+
+import { Slider } from "~/components/slider";
+import { Items } from "~/assets/data";
+import { Context } from "~/contexts/context";
 
 interface Props {}
 
 const Index: NextPage<Props> = () => {
+  const { referenceIncome } = useContext(Context);
+
   return (
     <>
-      <NextSeo title="Index" />
+      <NextSeo title="Relative Preise" />
       <DefaultPage>
-        <LogoSvg tw="w-256 h-256" />
-        <h1>Index</h1>
+        <h1>Relative Preise</h1>
+        <Slider />
+        Referenz Einkommen: {referenceIncome}
+        <ItemList items={Items} />
       </DefaultPage>
     </>
   );
