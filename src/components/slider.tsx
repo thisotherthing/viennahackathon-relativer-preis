@@ -98,12 +98,12 @@ export const Slider = () => {
   const { income, setIncome } = useContext(Context);
 
   return (
-    <div>
+    <div tw="mb-12">
       <div tw="container flex justify-between">
-        <label tw="text-[30px]" htmlFor="_income_slider">
+        <label tw="md:text-[30px]" htmlFor="_income_slider">
           Monatliches Netto-Einkommen:
         </label>
-        <span tw="text-[30px] whitespace-nowrap">{income} €</span>
+        <span tw="md:text-[30px] whitespace-nowrap">{income} €</span>
       </div>
       <Input
         type="range"
@@ -111,7 +111,7 @@ export const Slider = () => {
         name="volume"
         min="0"
         max="10000"
-        tw="w-full cursor-pointer outline-none "
+        tw="w-full cursor-pointer outline-none my-16"
         value={income}
         onChange={(v) => {
           if (v.target && setIncome !== undefined) {
