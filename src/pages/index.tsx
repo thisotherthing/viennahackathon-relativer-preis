@@ -21,7 +21,9 @@ const Index: NextPage<Props> = () => {
       <NextSeo title="Mind the Gap – Rechner für Relative Preise" />
       <DefaultPage>
         <div tw="max-w-[92%] md:max-w-[840px] px-10 m-auto h-screen text-left text-[20px] mt-80">
-          <h1 tw="text-[40px] font-black mb-14">Mind the Gap – Rechner für Relative Preise</h1>
+          <h1 tw="text-[40px] font-black mb-20 line-height[1.1em]">
+            Mind the Gap <br /> <span tw="font-size[0.65em] opacity-70">Rechner für Relative Preise</span>
+          </h1>
           <Slider />
           <Settings />
           <div tw="flex justify-between mt-20 items-center text-left">
