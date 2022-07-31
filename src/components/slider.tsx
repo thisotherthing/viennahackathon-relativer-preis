@@ -99,13 +99,13 @@ export const Slider = () => {
 
   return (
     <div tw="mb-12">
-      <div tw="container flex justify-between ">
+      <div tw="container flex justify-between flex-col md:flex-row text-left md:text-right">
         <label tw="md:text-[30px]" htmlFor="_income_slider">
           Monatliches Netto-Einkommen:
         </label>
-        <span tw="md:text-[30px] whitespace-nowrap text-right">
+        <span tw="md:text-[30px] whitespace-nowrap">
           <input
-            tw="width[6em] text-right focus:outline-none"
+            tw="width[3em] md:width[6em] focus:outline-none text-right"
             value={income}
             maxLength={6}
             onChange={(v) => {

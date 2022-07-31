@@ -33,7 +33,7 @@ export const Settings = () => {
           ))}
         </select>
       </div> */}
-      <div tw="flex justify-between">
+      <div tw="flex justify-between flex-col md:flex-row">
         <label htmlFor="federal-state">Bundesland</label>
         <Select
           tw="relative border-2 border-radius[26px] px-8 py-4 pl-16 pr-34 bg-white -webkit-appearance[none] -moz-appearance[none]"

@@ -26,11 +26,11 @@ const Index: NextPage<Props> = () => {
           </h1>
           <Slider />
           <Settings />
-          <div tw="flex justify-between mt-20 items-center text-left">
+          <div tw="flex flex-col md:flex-row justify-between mt-20 md:items-center text-left">
             <span>Referenz Einkommen {Incomes[0]?.name}:</span>
             <span tw="text-[25px] whitespace-nowrap">{referenceIncome} €</span>
           </div>
-          <div tw="flex justify-between mt-20 items-center text-left">
+          <div tw="flex flex-col md:flex-row justify-between mt-20 md:items-center md:text-left">
             <span>Preisveränderung:</span>
             <span tw="text-[25px] whitespace-nowrap">
               {getAdjustedPrice({ price: 100 }, referenceIncome, income).adjustedPrice.toFixed(1)} %
