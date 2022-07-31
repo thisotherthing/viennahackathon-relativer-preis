@@ -13,6 +13,15 @@ import { getAdjustedPrice } from "~/utils/priceCalc";
 
 interface Props {}
 
+const DataShow = (props: { label: string; value: string }) => {
+  return (
+    <div tw="flex flex-col justify-end text-center font-size[0.8em] py-18 px-40 border-radius[26px] background[#DDF0C9] w-full md:width[calc(50% - 10px)] mb-20">
+      <div tw="flex justify-center items-center h-full">{props.label}:</div>
+      <span tw="text-[32px] font-bold mt-4 whitespace-nowrap">{props.value}</span>
+    </div>
+  );
+};
+
 const Index: NextPage<Props> = () => {
   const { referenceIncome, income } = useContext(Context);
 
@@ -26,16 +35,26 @@ const Index: NextPage<Props> = () => {
           </h1>
           <Slider />
           <Settings />
-          <div tw="flex flex-col md:flex-row justify-between mt-20 md:items-center text-left">
+
+          <div tw="w-full flex flex-col md:flex-row md:justify-between mt-14">
+            <DataShow label={`Referenz Einkommen ${Incomes[0]?.name}`} value={`${referenceIncome.toFixed(0)} €`} />
+            <DataShow
+              label={`Preisveränderung`}
+              value={`${getAdjustedPrice({ price: 100 }, referenceIncome, income).adjustedPrice.toFixed(1)} %`}
+            />
+          </div>
+
+          {/* <div tw="flex flex-col md:flex-row justify-between mt-20 md:items-center text-left">
             <span>Referenz Einkommen {Incomes[0]?.name}:</span>
             <span tw="text-[25px] whitespace-nowrap">{referenceIncome} €</span>
           </div>
+
           <div tw="flex flex-col md:flex-row justify-between mt-20 md:items-center md:text-left">
-            <span>Preisveränderung:</span>
+            <span>Preisveränderung</span>
             <span tw="text-[25px] whitespace-nowrap">
               {getAdjustedPrice({ price: 100 }, referenceIncome, income).adjustedPrice.toFixed(1)} %
             </span>
-          </div>
+          </div> */}
           <ItemList items={Items} />
 
           <References />
