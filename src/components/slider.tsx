@@ -99,11 +99,22 @@ export const Slider = () => {
 
   return (
     <div tw="mb-12">
-      <div tw="container flex justify-between">
+      <div tw="container flex justify-between ">
         <label tw="md:text-[30px]" htmlFor="_income_slider">
           Monatliches Netto-Einkommen:
         </label>
-        <span tw="md:text-[30px] whitespace-nowrap">{income} €</span>
+        <span tw="md:text-[30px] whitespace-nowrap text-right">
+          <input
+            tw="width[6em] text-right"
+            value={income}
+            onChange={(v) => {
+              if (v.target && setIncome !== undefined) {
+                setIncome(parseFloat(v.target.value) || 0);
+              }
+            }}
+          />{" "}
+          €
+        </span>
       </div>
       <Input
         type="range"
