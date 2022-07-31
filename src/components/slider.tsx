@@ -103,7 +103,7 @@ export const Slider = () => {
         <label tw="md:text-[30px]" htmlFor="_income_slider">
           Monatliches Netto-Einkommen:
         </label>
-        <span tw="md:text-[30px] whitespace-nowrap">
+        <span tw="text-center md:text-align[unset] text-[1.4em] mt-2 md:mt-0 md:text-[30px] whitespace-nowrap">
           <input
             tw="width[3em] md:width[6em] focus:outline-none text-right"
             value={income}
