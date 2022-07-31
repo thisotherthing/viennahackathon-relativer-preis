@@ -105,7 +105,7 @@ export const Slider = () => {
         </label>
         <span tw="md:text-[30px] whitespace-nowrap text-right">
           <input
-            tw="width[6em] text-right"
+            tw="width[6em] text-right focus:outline-none"
             value={income}
             onChange={(v) => {
               if (v.target && setIncome !== undefined) {
