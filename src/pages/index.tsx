@@ -16,7 +16,7 @@ interface Props {}
 const DataShow = (props: { label: string; value: string }) => {
   return (
     <div tw="flex flex-col justify-end text-center font-size[0.8em] py-18 px-40 border-radius[26px] background[#ffc9b5] w-full md:width[calc(50% - 10px)] mb-20">
-      <div tw="flex justify-center items-center h-full">{props.label}:</div>
+      <div tw="flex justify-center items-center h-full min-height[3.2em]">{props.label}:</div>
       <span tw="text-[32px] font-bold mt-4 whitespace-nowrap">{props.value}</span>
     </div>
   );
