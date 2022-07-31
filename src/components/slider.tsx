@@ -107,6 +107,7 @@ export const Slider = () => {
           <input
             tw="width[6em] text-right focus:outline-none"
             value={income}
+            maxLength={6}
             onChange={(v) => {
               if (v.target && setIncome !== undefined) {
                 setIncome(parseFloat(v.target.value) || 0);
