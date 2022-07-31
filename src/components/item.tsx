@@ -21,28 +21,26 @@ export const Item = (props: Props) => {
 
   return (
     <section tw="font-bold relative w-full md:width[calc(50% - 10px)] mb-20">
-      <div tw="border-radius[26px] border-2 border-dashed border-black w-full h-full absolute transform[scale(0.99)]" />
-      <div tw="flex flex-row items-center transform hover:-translate-x-7 hover:-translate-y-7 border-radius[26px] border-2 border-black p-16 pr-28 w-full background[white] transition transition-transform">
-        <div
-          tw="aspect-ratio[1] width[100px] border-radius[20px] overflow-hidden mr-26 flex-shrink-0 flex justify-center items-center"
-          style={{ background: `#${props.item.color}` || "green" }}
-        >
-          <img tw="w-60" src={`/icons/${props.item.icon}.svg`} alt={`${props.item.name} icon`} aria-hidden />
-        </div>
+      <a tw="" target="_blank" rel="noopener noreferrer" href={props.item.url}>
+        <div tw="border-radius[26px] border-2 border-dashed border-black w-full h-full absolute transform[scale(0.99)]" />
+        <div tw="flex flex-row items-center transform hover:-translate-x-7 hover:-translate-y-7 border-radius[26px] border-2 border-black p-16 pr-28 w-full background[white] transition transition-transform">
+          <div
+            tw="aspect-ratio[1] width[100px] border-radius[20px] overflow-hidden mr-26 flex-shrink-0 flex justify-center items-center"
+            style={{ background: `#${props.item.color}` || "green" }}
+          >
+            <img tw="w-60" src={`/icons/${props.item.icon}.svg`} alt={`${props.item.name} icon`} aria-hidden />
+          </div>
 
-        <div tw="flex flex-col w-full truncate">
-          <h3 tw="truncate mb-8 font-size[14px] md:font-size[18px]">
-            <a tw="underline" target="_blank" rel="noopener noreferrer" href={props.item.url}>
-              {props.item.name}
-            </a>
-          </h3>
-          <div tw="w-full flex flex-row justify-between font-size[16px] md:font-size[22px]">
-            <span>{formatNumber(props.item.price)} €</span>
-            <span>{"-->"}</span>
-            <span>{formatNumber(adjusted.adjustedPrice)} €</span>
+          <div tw="flex flex-col w-full truncate">
+            <h3 tw="truncate mb-8 font-size[14px] md:font-size[18px]">{props.item.name}</h3>
+            <div tw="w-full flex flex-row justify-between font-size[16px] md:font-size[22px]">
+              <span>{formatNumber(props.item.price)} €</span>
+              <span>{"-->"}</span>
+              <span>{formatNumber(adjusted.adjustedPrice)} €</span>
+            </div>
           </div>
         </div>
-      </div>
+      </a>
     </section>
   );
 };
